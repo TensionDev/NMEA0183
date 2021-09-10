@@ -1,7 +1,8 @@
-# TensionDev.NMEA0183
+# TensionDev.Maritime.NMEA0183
 
 [![.NET](https://github.com/TensionDev/NMEA0183/actions/workflows/dotnet.yml/badge.svg)](https://github.com/TensionDev/NMEA0183/actions/workflows/dotnet.yml)
 [![Package Release](https://github.com/TensionDev/NMEA0183/actions/workflows/package-release.yml/badge.svg)](https://github.com/TensionDev/NMEA0183/actions/workflows/package-release.yml)
+[![CodeQL](https://github.com/TensionDev/NMEA0183/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/TensionDev/NMEA0183/actions/workflows/codeql-analysis.yml)
 
 A project to encode and decode known NMEA 0183 Sentences.
 This project references the following documents for implementation.

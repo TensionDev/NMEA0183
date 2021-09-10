@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace TensionDev.NMEA0183
+namespace TensionDev.Maritime.NMEA0183
 {
     /// <summary>
     /// DPT - Depth of Water

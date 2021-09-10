@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TensionDev.NMEA0183
+namespace TensionDev.Maritime.NMEA0183
 {
     public abstract class NMEASentence
     {

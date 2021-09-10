@@ -1,5 +1,5 @@
 using System;
-using TensionDev.NMEA0183;
+using TensionDev.Maritime.NMEA0183;
 using Xunit;
 
 namespace XUnitTestProjectNMEA0183
