@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.1.0-alpha] - 2021-09-10
+[v0.1.0-alpha](https://github.com/TensionDev/NMEA0183/releases/tag/v0.1.0-alpha)
+
 ### Added
 - Added DPT Sentence.
 - Added GGA Sentence.
