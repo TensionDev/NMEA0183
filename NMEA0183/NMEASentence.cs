@@ -34,8 +34,16 @@ namespace TensionDev.NMEA0183
                     nmeaSentence = new DPTSentence();
                     break;
 
+                case "GGA":
+                    nmeaSentence = new GGASentence();
+                    break;
+
                 case "GLL":
                     nmeaSentence = new GLLSentence();
+                    break;
+
+                case "HDT":
+                    nmeaSentence = new HDTSentence();
                     break;
 
                 default:
