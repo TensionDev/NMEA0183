@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMEA0183", "NMEA0183\NMEA0183.csproj", "{F03A715B-C9AD-47DF-B8A6-032B46469685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NMEA0183", "NMEA0183\NMEA0183.csproj", "{F03A715B-C9AD-47DF-B8A6-032B46469685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProjectNMEA0183", "XUnitTestProjectNMEA0183\XUnitTestProjectNMEA0183.csproj", "{87213441-8367-408B-A136-4FE7C6EAC529}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F03A715B-C9AD-47DF-B8A6-032B46469685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F03A715B-C9AD-47DF-B8A6-032B46469685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F03A715B-C9AD-47DF-B8A6-032B46469685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87213441-8367-408B-A136-4FE7C6EAC529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87213441-8367-408B-A136-4FE7C6EAC529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87213441-8367-408B-A136-4FE7C6EAC529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87213441-8367-408B-A136-4FE7C6EAC529}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
