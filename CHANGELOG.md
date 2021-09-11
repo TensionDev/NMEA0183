@@ -8,8 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Added DTM Sentence.
+- Added GST Sentence.
+- Added THS Sentence.
+- Added TTM Sentence.
+- Added VBW Sentence.
+- Added VTG Sentence.
+
+## [v0.2.0-alpha] - 2021-09-11
+[v0.2.0-alpha](https://github.com/TensionDev/NMEA0183/releases/tag/v0.2.0-alpha)
+
 ### Changed
 - Changed Namespace from TensionDev.NMEA0183 to TensionDev.Maritime.NMEA0183 to reflect possible expansion to other maritime implementations.
+
+### Added
+- Added Query Sentence.
+- Added MWV Sentence.
+- Added ZDA Sentence.
 
 
 ## [v0.1.0-alpha] - 2021-09-10

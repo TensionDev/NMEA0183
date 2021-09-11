@@ -46,6 +46,14 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new HDTSentence();
                     break;
 
+                case "MWV":
+                    nmeaSentence = new MWVSentence();
+                    break;
+
+                case "ZDA":
+                    nmeaSentence = new ZDASentence();
+                    break;
+
                 default:
                     throw new NotImplementedException("Sentence Identifier not recognised.");
             }
