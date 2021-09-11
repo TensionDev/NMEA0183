@@ -34,6 +34,10 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new DPTSentence();
                     break;
 
+                case "DTM":
+                    nmeaSentence = new DTMSentence();
+                    break;
+
                 case "GGA":
                     nmeaSentence = new GGASentence();
                     break;
@@ -48,6 +52,26 @@ namespace TensionDev.Maritime.NMEA0183
 
                 case "MWV":
                     nmeaSentence = new MWVSentence();
+                    break;
+
+                case "OSD":
+                    nmeaSentence = new OSDSentence();
+                    break;
+
+                case "TTM":
+                    nmeaSentence = new TTMSentence();
+                    break;
+
+                case "VBW":
+                    nmeaSentence = new VBWSentence();
+                    break;
+
+                case "VHW":
+                    nmeaSentence = new VHWSentence();
+                    break;
+
+                case "VTG":
+                    nmeaSentence = new VTGSentence();
                     break;
 
                 case "ZDA":

@@ -74,16 +74,16 @@ namespace TensionDev.Maritime.NMEA0183
 
             String[] vs = sentence.Split(new char[] { ',', '*' });
 
-            // Wind angle
+            // x.x Wind angle
             WindAngleDegrees = Decimal.Parse(vs[1]);
 
-            // Wind reference
+            // a Wind reference
             WindReference = (WindReferenceEnum)Enum.Parse(typeof(WindReferenceEnum), vs[2]);
 
-            // Wind speed
+            // x.x Wind speed
             WindSpeed = Decimal.Parse(vs[3]);
 
-            // Wind speed units
+            // a Wind speed units
             WindSpeedUnits = (WindSpeedUnitsEnum)Enum.Parse(typeof(WindSpeedUnitsEnum), vs[4]);
 
             if (vs[5] == "A")
@@ -118,6 +118,10 @@ namespace TensionDev.Maritime.NMEA0183
             /// Knots - Nautical Mile per Hour
             /// </summary>
             N,
+            /// <summary>
+            /// mi/h - Statute Mile per Hour
+            /// </summary>
+            S,
         }
     }
 }

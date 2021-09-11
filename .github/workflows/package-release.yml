@@ -8,6 +8,8 @@ on:
   push:
     tags:
     - v[0-9]+.[0-9]+.[0-9]+
+    - v[0-9]+.[0-9]+.[0-9]+-alpha
+    - v[0-9]+.[0-9]+.[0-9]+-beta
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
