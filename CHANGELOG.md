@@ -11,17 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added DSC Sentence.
 - Added FSI Sentence.
-- Added GST Sentence.
-- Added HDG Sentence.
 - Added HMR Sentence.
 - Added HMS Sentence.
 - Added HTC Sentence.
 - Added HTD Sentence.
-- Added ROT Sentence.
 - Added RPM Sentence.
 - Added RSA Sentence.
 - Added RSD Sentence.
 - Added SFI Sentence.
+
+## [v0.4.0] - 2021-10-02
+[v0.4.0](https://github.com/TensionDev/NMEA0183/releases/tag/v0.4.0)
+
+### Added
+- Added GST Sentence.
+- Added HDG Sentence.
+- Added ROT Sentence.
 - Added THS Sentence.
 
 ## [v0.3.0-beta] - 2021-09-12

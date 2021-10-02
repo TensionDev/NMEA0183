@@ -46,6 +46,14 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new GLLSentence();
                     break;
 
+                case "GST":
+                    nmeaSentence = new GSTSentence();
+                    break;
+
+                case "HDG":
+                    nmeaSentence = new HDGSentence();
+                    break;
+
                 case "HDT":
                     nmeaSentence = new HDTSentence();
                     break;
@@ -56,6 +64,14 @@ namespace TensionDev.Maritime.NMEA0183
 
                 case "OSD":
                     nmeaSentence = new OSDSentence();
+                    break;
+
+                case "ROT":
+                    nmeaSentence = new ROTSentence();
+                    break;
+
+                case "THS":
+                    nmeaSentence = new THSSentence();
                     break;
 
                 case "TTM":
