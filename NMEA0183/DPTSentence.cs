@@ -62,7 +62,8 @@ namespace TensionDev.Maritime.NMEA0183
             OffsetFromTransducerMetres = Decimal.Parse(vs[2]);
 
             // x.x Maximum Range Scale
-            MaximumDepthRangeMetres = Decimal.Parse(vs[3]);
+            if (vs.Length > 4)
+                MaximumDepthRangeMetres = Decimal.Parse(vs[3]);
         }
     }
 }

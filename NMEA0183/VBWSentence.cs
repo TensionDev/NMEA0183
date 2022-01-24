@@ -143,17 +143,20 @@ namespace TensionDev.Maritime.NMEA0183
             // A Ground Speed Data Valid?
             IsGroundDataValid = (vs[6] == "A");
 
-            // x.x Stern Transverse Water Speed in Knots
-            SternTransverseWaterSpeedKnots = Decimal.Parse(vs[7]);
+            if (vs.Length > 8)
+            {
+                // x.x Stern Transverse Water Speed in Knots
+                SternTransverseWaterSpeedKnots = Decimal.Parse(vs[7]);
 
-            // A Stern Water Speed Data Valid?
-            IsSternWaterDataValid = (vs[8] == "A");
+                // A Stern Water Speed Data Valid?
+                IsSternWaterDataValid = (vs[8] == "A");
 
-            // x.x Stern Transverse Ground Speed in Knots
-            SternTransverseGroundSpeedKnots = Decimal.Parse(vs[9]);
+                // x.x Stern Transverse Ground Speed in Knots
+                SternTransverseGroundSpeedKnots = Decimal.Parse(vs[9]);
 
-            // A Stern Ground Speed Data Valid?
-            IsSternGroundDataValid = (vs[10] == "A");
+                // A Stern Ground Speed Data Valid?
+                IsSternGroundDataValid = (vs[10] == "A");
+            }
         }
     }
 }

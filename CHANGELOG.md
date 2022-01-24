@@ -20,6 +20,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added RSD Sentence.
 - Added SFI Sentence.
 
+
+## [v0.4.1] - 2022-01-24
+[v0.4.1](https://github.com/TensionDev/NMEA0183/releases/tag/v0.4.1)
+
+### Changed
+- Changed DPT to support previous NMEA 0183 implementations.
+- Changed VBW to support previous NMEA 0183 implementations.
+- Changed VTG to support previous NMEA 0183 implementations.
+
+
 ## [v0.4.0] - 2021-10-02
 [v0.4.0](https://github.com/TensionDev/NMEA0183/releases/tag/v0.4.0)
 

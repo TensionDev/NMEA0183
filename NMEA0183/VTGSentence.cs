@@ -81,7 +81,8 @@ namespace TensionDev.Maritime.NMEA0183
             SpeedOverGroundKmh = Decimal.Parse(vs[7]);
 
             // a Mode Indicator
-            ModeIndicator = (ModeIndicatorEnum)Enum.Parse(typeof(ModeIndicatorEnum), vs[9]);
+            if (vs.Length > 10)
+                ModeIndicator = (ModeIndicatorEnum)Enum.Parse(typeof(ModeIndicatorEnum), vs[9]);
         }
 
         public enum ModeIndicatorEnum

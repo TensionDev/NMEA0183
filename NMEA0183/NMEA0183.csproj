@@ -7,12 +7,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>TensionDev.Maritime.NMEA0183</PackageId>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
     <Authors>TensionDev amsga</Authors>
     <Company>TensionDev</Company>
     <Product>TensionDev.Maritime.NMEA0183</Product>
     <Description>A project to encode and decode known NMEA 0183 messages.</Description>
-    <Copyright>Copyright (c) TensionDev 2021</Copyright>
+    <Copyright>Copyright (c) TensionDev 2021 - 2022</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/TensionDev/NMEA0183</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TensionDev/NMEA0183</RepositoryUrl>
@@ -21,7 +21,7 @@
     <PackageReleaseNotes>Initial project release</PackageReleaseNotes>
     <NeutralLanguage>en-SG</NeutralLanguage>
     <AssemblyVersion>0.4.0.0</AssemblyVersion>
-    <FileVersion>0.4.0.0</FileVersion>
+    <FileVersion>0.4.1.0</FileVersion>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
