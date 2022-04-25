@@ -30,6 +30,14 @@ namespace TensionDev.Maritime.NMEA0183
             NMEASentence nmeaSentence;
             switch (sentenceIdentifier)
             {
+                case "AAM":
+                    nmeaSentence = new AAMSentence();
+                    break;
+
+                case "APB":
+                    nmeaSentence = new APBSentence();
+                    break;
+
                 case "DPT":
                     nmeaSentence = new DPTSentence();
                     break;
@@ -78,6 +86,10 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new TTMSentence();
                     break;
 
+                case "TXT":
+                    nmeaSentence = new TXTSentence();
+                    break;
+
                 case "VBW":
                     nmeaSentence = new VBWSentence();
                     break;
@@ -88,6 +100,10 @@ namespace TensionDev.Maritime.NMEA0183
 
                 case "VTG":
                     nmeaSentence = new VTGSentence();
+                    break;
+
+                case "XTE":
+                    nmeaSentence = new XTESentence();
                     break;
 
                 case "ZDA":
@@ -120,12 +136,25 @@ namespace TensionDev.Maritime.NMEA0183
             TalkerIdentifier = TalkerIdentifier.FromString(identifier);
         }
 
+        public static Boolean IsChecksumValid(String sentence)
+        {
+            Int32 index = sentence.IndexOf('*');
+            if (index == -1)
+                return false;
+
+            Byte checksum = Byte.Parse(sentence.Substring(index + 1, 2), System.Globalization.NumberStyles.HexNumber);
+
+            Byte calculatedChecksum = CalculateChecksum(sentence.Remove(index));
+
+            return calculatedChecksum == checksum;
+        }
+
         /// <summary>
         /// Calculate the checksum value for the NMEA 0183 sentence
         /// </summary>
         /// <param name="sentence">The NMEA 0183 sentence to be computed, inclusive of the start delimiter "$" and just before the checksum delimiter "*"</param>
         /// <returns>The 8-bit XOR value.</returns>
-        protected Byte CalculateChecksum(String sentence)
+        protected static Byte CalculateChecksum(String sentence)
         {
             Byte checksum = 0b0;
             Byte[] data = System.Text.Encoding.ASCII.GetBytes(sentence.Substring(1));

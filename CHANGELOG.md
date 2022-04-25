@@ -21,6 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added SFI Sentence.
 
 
+## [v0.5.0] - 2022-04-25
+[v0.5.0](https://github.com/TensionDev/NMEA0183/releases/tag/v0.5.0)
+
+### Added
+- Added AAM Sentence.
+- Added APM Sentence.
+- Added TXT Sentence.
+- Added XTE Sentence.
+
+
 ## [v0.4.1] - 2022-01-24
 [v0.4.1](https://github.com/TensionDev/NMEA0183/releases/tag/v0.4.1)
 
