@@ -86,6 +86,7 @@ namespace TensionDev.Maritime.NMEA0183
             // a Wind speed units
             WindSpeedUnits = (WindSpeedUnitsEnum)Enum.Parse(typeof(WindSpeedUnitsEnum), vs[4]);
 
+            // A Status
             if (vs[5] == "A")
                 IsDataValid = true;
             else

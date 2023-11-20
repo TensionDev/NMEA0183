@@ -150,7 +150,7 @@ namespace TensionDev.Maritime.NMEA0183
 
             String[] vs = sentence.Split(new char[] { ',', '*' });
 
-            // UTC Time
+            // hhmmss.ss UTC Time
             String time = vs[1];
             time = time.Insert(4, ":");
             time = time.Insert(2, ":");
@@ -178,26 +178,28 @@ namespace TensionDev.Maritime.NMEA0183
             if (vs[5] == "W")
                 LongitudeDecimalDegrees *= Decimal.MinusOne;
 
-            // GPS Quality Indicator
+            // x GPS Quality Indicator
             GPSQualityIndicator = (GPSQualityIndicatorEnum)Int32.Parse(vs[6]);
 
-            // Number of Satellites in use
+            // xx Number of Satellites in use
             NumberofSatellitesInUse = Byte.Parse(vs[7]);
 
-            // Horizontal dilution of precision
+            // x.x Horizontal dilution of precision
             HorizontalDilutionOfPrecision = Decimal.Parse(vs[8]);
 
-            // Antenna altitude above mean sea level
+            // x.x Antenna altitude above mean sea level
             AntennaAltitudeAboveMeanSeaLevel = Decimal.Parse(vs[9]);
 
-            // Geoidal separation
+            // x.x Geoidal separation
             GeoidalSeparation = Decimal.Parse(vs[11]);
 
+            // x.x Age of Differential GPS data
             if (vs[13].Length > 0)
                 AgeOfDifferentialGPSData = Decimal.Parse(vs[13]);
             else
                 AgeOfDifferentialGPSData = null;
 
+            // xxxx Differential reference station ID
             if (vs[14].Length > 0)
                 DifferentialReferenceStationID = UInt16.Parse(vs[14]);
             else

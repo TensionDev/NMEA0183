@@ -58,19 +58,20 @@ namespace TensionDev.Maritime.NMEA0183
 
             String[] vs = sentence.Split(new char[] { ',', '*' });
 
-            // UTC Time
+            // hhmmss.ss UTC Time
             String time = vs[1];
             time = time.Insert(4, ":");
             time = time.Insert(2, ":");
             TimeSpan timeSpan = TimeSpan.Parse(time);
 
-            // UTC Date
+            // xx,xx,xxxx UTC Date
             Int32 day = Int32.Parse(vs[2]);
             Int32 month = Int32.Parse(vs[3]);
             Int32 year = Int32.Parse(vs[4]);
 
             UTCDateTimeAtPosition = new DateTime(year, month, day, timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds, DateTimeKind.Utc);
 
+            // xx,xx Local zone
             StringBuilder UTCOffset = new StringBuilder();
             UTCOffset.AppendFormat("{0}:{1}", vs[5], vs[6]);
             DifferenceToUtc = TimeSpan.Parse(UTCOffset.ToString());

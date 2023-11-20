@@ -114,7 +114,7 @@ namespace TensionDev.Maritime.NMEA0183
             if (vs[4] == "W")
                 LongitudeDecimalDegrees *= Decimal.MinusOne;
 
-            // UTC Time
+            // hhmmss.ss UTC Time
             String time = vs[5];
             time = time.Insert(4, ":");
             time = time.Insert(2, ":");
@@ -122,6 +122,7 @@ namespace TensionDev.Maritime.NMEA0183
             DateTime today = DateTime.UtcNow;
             UTCTimeAtPosition = new DateTime(today.Year, today.Month, today.Day, timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds, DateTimeKind.Utc);
 
+            // A Status
             if (vs[6] == "A")
                 IsDataValid = true;
             else

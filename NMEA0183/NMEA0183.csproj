@@ -7,12 +7,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>TensionDev.Maritime.NMEA0183</PackageId>
-    <Version>0.5.0</Version>
+    <Version>0.6.0</Version>
     <Authors>TensionDev amsga</Authors>
     <Company>TensionDev</Company>
     <Product>TensionDev.Maritime.NMEA0183</Product>
     <Description>A project to encode and decode known NMEA 0183 messages.</Description>
-    <Copyright>Copyright (c) TensionDev 2021 - 2022</Copyright>
+    <Copyright>Copyright (c) TensionDev 2021 - 2023</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/TensionDev/NMEA0183</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TensionDev/NMEA0183</RepositoryUrl>
@@ -20,10 +20,18 @@
     <PackageTags>NMEA0183</PackageTags>
     <PackageReleaseNotes>Initial project release</PackageReleaseNotes>
     <NeutralLanguage>en-SG</NeutralLanguage>
-    <AssemblyVersion>0.5.0.0</AssemblyVersion>
-    <FileVersion>0.5.0.0</FileVersion>
+    <AssemblyVersion>0.6.0.0</AssemblyVersion>
+    <FileVersion>0.6.0.0</FileVersion>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

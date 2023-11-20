@@ -46,6 +46,10 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new DTMSentence();
                     break;
 
+                case "FSI":
+                    nmeaSentence = new FSISentence();
+                    break;
+
                 case "GGA":
                     nmeaSentence = new GGASentence();
                     break;
@@ -66,6 +70,14 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new HDTSentence();
                     break;
 
+                case "HMR":
+                    nmeaSentence = new HMRSentence();
+                    break;
+
+                case "HMS":
+                    nmeaSentence = new HMSSentence();
+                    break;
+
                 case "MWV":
                     nmeaSentence = new MWVSentence();
                     break;
@@ -76,6 +88,14 @@ namespace TensionDev.Maritime.NMEA0183
 
                 case "ROT":
                     nmeaSentence = new ROTSentence();
+                    break;
+
+                case "RPM":
+                    nmeaSentence = new RPMSentence();
+                    break;
+
+                case "RSA":
+                    nmeaSentence = new RSASentence();
                     break;
 
                 case "THS":
