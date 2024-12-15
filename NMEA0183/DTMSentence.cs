@@ -20,6 +20,13 @@ namespace TensionDev.Maritime.NMEA0183
         /// </summary>
         public EarthCentredDatumEnum LocalDatumEarthCentred
         {
+            get
+            {
+                bool parsed = Enum.TryParse<EarthCentredDatumEnum>(LocalDatumCode, true, out EarthCentredDatumEnum result);
+                if (!parsed)
+                    return EarthCentredDatumEnum.UserDefined;
+                return result;
+            }
             set
             {
                 switch (value)
@@ -132,7 +139,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // ccc Local Datum Code
             LocalDatumCode = vs[1];

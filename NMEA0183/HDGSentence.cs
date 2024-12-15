@@ -79,7 +79,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // x.x Magnetic sensor heading
             MagneticSensorHeading = Decimal.Parse(vs[1]);
@@ -88,7 +88,7 @@ namespace TensionDev.Maritime.NMEA0183
             if (vs[2].Length > 0)
             {
                 MagneticDeviation = Decimal.Parse(vs[2]);
-                MagneticDeviationDirection = (DirectionEnum)Enum.Parse(typeof(DirectionEnum), vs[3]); ;
+                MagneticDeviationDirection = (DirectionEnum)Enum.Parse(typeof(DirectionEnum), vs[3]);
             }
             else
             {
@@ -100,7 +100,7 @@ namespace TensionDev.Maritime.NMEA0183
             if (vs[4].Length > 0)
             {
                 MagneticVariation = Decimal.Parse(vs[4]);
-                MagneticVariationDirection = (DirectionEnum)Enum.Parse(typeof(DirectionEnum), vs[5]); ;
+                MagneticVariationDirection = (DirectionEnum)Enum.Parse(typeof(DirectionEnum), vs[5]);
             }
             else
             {

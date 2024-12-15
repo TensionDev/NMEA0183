@@ -66,7 +66,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // xx Total number of sentences
             TotalNumberOfSentences = Byte.Parse(vs[1]);
@@ -82,7 +82,7 @@ namespace TensionDev.Maritime.NMEA0183
             TextMessage = DecodeUndefinedCharacters(encoded);
         }
 
-        private String EncodeUndefinedCharacters(String textMessage)
+        private static String EncodeUndefinedCharacters(String textMessage)
         {
             String vs = textMessage;
 
@@ -130,7 +130,7 @@ namespace TensionDev.Maritime.NMEA0183
             return vs;
         }
 
-        private String DecodeUndefinedCharacters(String textMessage)
+        private static String DecodeUndefinedCharacters(String textMessage)
         {
             String vs = textMessage;
 

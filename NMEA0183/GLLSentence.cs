@@ -92,7 +92,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // XXyy.yy Latitude
             String degreeDec = vs[1].Substring(0, 2);

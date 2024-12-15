@@ -143,7 +143,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // xx Target Number
             TargetNumber = Byte.Parse(vs[1]);

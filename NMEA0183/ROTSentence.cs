@@ -49,7 +49,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // x.x Rate of turn
             RateOfTurn = Decimal.Parse(vs[1]);

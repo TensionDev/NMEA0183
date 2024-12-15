@@ -165,7 +165,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // c--c Heading Sensor 1 ID
             HeadingSensorOneID = vs[1];

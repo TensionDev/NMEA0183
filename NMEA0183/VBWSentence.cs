@@ -123,7 +123,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // x.x Longitudinal Water Speed in Knots
             LongitudinalWaterSpeedKnots = Decimal.Parse(vs[1]);

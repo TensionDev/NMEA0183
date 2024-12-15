@@ -43,7 +43,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             ListenerIdentifier = TalkerIdentifier.FromString(vs[0].Substring(3, 2));
 

@@ -53,7 +53,7 @@ namespace TensionDev.Maritime.NMEA0183
         {
             DecodeTalker(sentence);
 
-            String[] vs = sentence.Split(new char[] { ',', '*' });
+            String[] vs = sentence.Split(',', '*');
 
             // x.x Water Depth
             DepthMetres = Decimal.Parse(vs[1]);
