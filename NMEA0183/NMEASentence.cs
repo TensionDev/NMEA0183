@@ -42,6 +42,10 @@ namespace TensionDev.Maritime.NMEA0183
                     nmeaSentence = new DPTSentence();
                     break;
 
+                case "DSC":
+                    nmeaSentence = new DSCSentence();
+                    break;
+
                 case "DTM":
                     nmeaSentence = new DTMSentence();
                     break;

@@ -104,14 +104,8 @@ namespace TensionDev.Maritime.NMEA0183
 
             if (DeviationSensorOneDegrees.HasValue)
             {
-                if (DeviationSensorOneDegrees.Value < 0)
-                {
-                    stringBuilder.AppendFormat("{0},W,", Math.Abs(DeviationSensorOneDegrees.Value));
-                }
-                else
-                {
-                    stringBuilder.AppendFormat("{0},E,", Math.Abs(DeviationSensorOneDegrees.Value));
-                }    
+                stringBuilder.AppendFormat("{0},", Math.Abs(DeviationSensorOneDegrees.Value));
+                stringBuilder.AppendFormat("{0},", DeviationSensorOneDegrees < 0 ? "W" : "E");
             }
             else
             {
@@ -124,14 +118,8 @@ namespace TensionDev.Maritime.NMEA0183
 
             if (DeviationSensorTwoDegrees.HasValue)
             {
-                if (DeviationSensorTwoDegrees.Value < 0)
-                {
-                    stringBuilder.AppendFormat("{0},W,", Math.Abs(DeviationSensorTwoDegrees.Value));
-                }
-                else
-                {
-                    stringBuilder.AppendFormat("{0},E,", Math.Abs(DeviationSensorTwoDegrees.Value));
-                }
+                stringBuilder.AppendFormat("{0},", Math.Abs(DeviationSensorTwoDegrees.Value));
+                stringBuilder.AppendFormat("{0},", DeviationSensorTwoDegrees < 0 ? "W" : "E");
             }
             else
             {
@@ -140,14 +128,8 @@ namespace TensionDev.Maritime.NMEA0183
 
             if (VariationDegrees.HasValue)
             {
-                if (VariationDegrees.Value < 0)
-                {
-                    stringBuilder.AppendFormat("{0},W", Math.Abs(VariationDegrees.Value));
-                }
-                else
-                {
-                    stringBuilder.AppendFormat("{0},E", Math.Abs(VariationDegrees.Value));
-                }
+                stringBuilder.AppendFormat("{0},", Math.Abs(VariationDegrees.Value));
+                stringBuilder.AppendFormat("{0},", VariationDegrees < 0 ? "W" : "E");
             }
             else
             {

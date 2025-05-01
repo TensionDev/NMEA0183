@@ -14,6 +14,7 @@ This project references the following documents for implementation.
 - AAM
 - APM
 - DPT
+- DSC
 - DTM
 - FSI
 - GGA
