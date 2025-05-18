@@ -26,5 +26,31 @@ namespace XUnitTestProjectNMEA0183
             Assert.Equal(5.8M, dtmSentence.AltitudeOffsetMetres);
             Assert.Equal(DTMSentence.ReferenceDatumCodeEnum.W84, dtmSentence.ReferenceDatumCode);
         }
+
+        [Fact]
+        public void DTMEncoding()
+        {
+            String expected = "$GPDTM,999,,0.002,S,0.005,E,005.8,W84*1A\r\n";
+
+            DTMSentence dtmSentence = new DTMSentence()
+            {
+                TalkerIdentifier = new TalkerIdentifier()
+                {
+                    TalkerIdentifierEnum = TalkerIdentifierEnum.GlobalPositioningSystem,
+                },
+                LocalDatumCode = "999",
+                LocalDatumSubdivisionCode = "",
+                LatitudeOffsetMinutes = 0.002M,
+                LatitudeOffsetDirection = DTMSentence.LatitudeOffsetDirectionEnum.S,
+                LongitudeOffsetMinutes = 0.005M,
+                LongitudeOffsetDirection = DTMSentence.LongitudeOffsetDirectionEnum.E,
+                AltitudeOffsetMetres = 5.8M,
+                ReferenceDatumCode = DTMSentence.ReferenceDatumCodeEnum.W84,
+            };
+
+            string actual = dtmSentence.EncodeSentence();
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

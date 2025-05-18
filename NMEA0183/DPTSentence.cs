@@ -36,11 +36,11 @@ namespace TensionDev.Maritime.NMEA0183
 
             stringBuilder.AppendFormat("${0}{1},", TalkerIdentifier.ToString(), SentenceIdentifier);
 
-            stringBuilder.AppendFormat("{0},", DepthMetres.ToString());
+            stringBuilder.AppendFormat("{0},", DepthMetres);
 
-            stringBuilder.AppendFormat("{0},", OffsetFromTransducerMetres.ToString());
+            stringBuilder.AppendFormat("{0},", OffsetFromTransducerMetres);
 
-            stringBuilder.AppendFormat("{0}", MaximumDepthRangeMetres.ToString());
+            stringBuilder.AppendFormat("{0}", MaximumDepthRangeMetres);
 
             Byte checksum = CalculateChecksum(stringBuilder.ToString());
 

@@ -39,5 +39,49 @@ namespace XUnitTestProjectNMEA0183
             Assert.Null(fsiSentence.ModeOfOperation);
             Assert.Equal(0u, fsiSentence.PowerLevel);
         }
+
+        [Fact]
+        public void FSIEncoding()
+        {
+            String expected = "$CTFSI,020230,026140,m,9*1D\r\n";
+
+            FSISentence fsiSentence = new FSISentence()
+            {
+                TalkerIdentifier = new TalkerIdentifier()
+                {
+                    TalkerIdentifierEnum = TalkerIdentifierEnum.CommunicationsRadioTelephoneMFOrHF,
+                },
+                TransmittingFrequency = "020230",
+                ReceivingFrequency = "026140",
+                ModeOfOperation = FSISentence.ModeOfOperationEnum.J3E_Telephone,
+                PowerLevel = 9,
+            };
+
+            string actual = fsiSentence.EncodeSentence();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void FSIEncoding_NullVariables()
+        {
+            String expected = "$CTFSI,,,,0*7B\r\n";
+
+            FSISentence fsiSentence = new FSISentence()
+            {
+                TalkerIdentifier = new TalkerIdentifier()
+                {
+                    TalkerIdentifierEnum = TalkerIdentifierEnum.CommunicationsRadioTelephoneMFOrHF,
+                },
+                TransmittingFrequency = null,
+                ReceivingFrequency = null,
+                ModeOfOperation = null,
+                PowerLevel = 0,
+            };
+
+            string actual = fsiSentence.EncodeSentence();
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

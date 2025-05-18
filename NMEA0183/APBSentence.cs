@@ -132,13 +132,13 @@ namespace TensionDev.Maritime.NMEA0183
             else
                 stringBuilder.Append("V,");
 
-            stringBuilder.AppendFormat("{0},{1},", BearingOriginToDestination, BearingOrignType.ToString());
+            stringBuilder.AppendFormat("{0:000.#},{1},", BearingOriginToDestination, BearingOrignType.ToString());
 
             stringBuilder.AppendFormat("{0},", WaypointID);
 
-            stringBuilder.AppendFormat("{0},{1},", BearingPresentPositionToDestination, BearingPresentPositionType.ToString());
+            stringBuilder.AppendFormat("{0:000.#},{1},", BearingPresentPositionToDestination, BearingPresentPositionType.ToString());
 
-            stringBuilder.AppendFormat("{0},{1},", HeadingToSteerToDestinationWaypoint, HeadingToSteerType.ToString());
+            stringBuilder.AppendFormat("{0:000.#},{1},", HeadingToSteerToDestinationWaypoint, HeadingToSteerType.ToString());
 
             stringBuilder.AppendFormat("{0}", ModeIndicator.ToString());
 

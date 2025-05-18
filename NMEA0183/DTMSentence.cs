@@ -116,15 +116,15 @@ namespace TensionDev.Maritime.NMEA0183
 
             stringBuilder.AppendFormat("{0},", LocalDatumSubdivisionCode);
 
-            stringBuilder.AppendFormat("{0},", LatitudeOffsetMinutes.ToString());
+            stringBuilder.AppendFormat("{0},", LatitudeOffsetMinutes);
 
-            stringBuilder.AppendFormat("{0},", LatitudeOffsetDirection.ToString());
+            stringBuilder.AppendFormat("{0},", LatitudeOffsetDirection);
 
-            stringBuilder.AppendFormat("{0},", LongitudeOffsetMinutes.ToString());
+            stringBuilder.AppendFormat("{0},", LongitudeOffsetMinutes);
 
-            stringBuilder.AppendFormat("{0},", LongitudeOffsetDirection.ToString());
+            stringBuilder.AppendFormat("{0},", LongitudeOffsetDirection);
 
-            stringBuilder.AppendFormat("{0},", AltitudeOffsetMetres.ToString());
+            stringBuilder.AppendFormat("{0:000.#},", AltitudeOffsetMetres);
 
             stringBuilder.AppendFormat("{0}", ReferenceDatumCode.ToString());
 

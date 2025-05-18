@@ -32,5 +32,37 @@ namespace XUnitTestProjectNMEA0183
             Assert.Equal(APBSentence.HeadingTypeEnum.M, apbSentence.HeadingToSteerType);
             Assert.Equal(APBSentence.ModeIndicatorEnum.S, apbSentence.ModeIndicator);
         }
+
+        [Fact]
+        public void APBEncoding()
+        {
+            String expected = "$GPAPB,A,A,0.10,R,N,V,V,011,M,DEST,012,M,013,M,S*42\r\n";
+
+            APBSentence apbSentence = new APBSentence()
+            {
+                TalkerIdentifier = new TalkerIdentifier()
+                {
+                    TalkerIdentifierEnum = TalkerIdentifierEnum.GlobalPositioningSystem,
+                },
+                IsReliableFixAvailable = true,
+                IsDataValid = true,
+                MagnitudeCrossTrackErrorNauticalMiles = 0.10M,
+                DirectionToSteer = APBSentence.DirectionToSteerEnum.R,
+                IsArrivalCircleEntered = false,
+                IsPerpendicularPassed = false,
+                BearingOriginToDestination = 11M,
+                BearingOrignType = APBSentence.BearingTypeEnum.M,
+                WaypointID = "DEST",
+                BearingPresentPositionToDestination = 12M,
+                BearingPresentPositionType = APBSentence.BearingTypeEnum.M,
+                HeadingToSteerToDestinationWaypoint = 13M,
+                HeadingToSteerType = APBSentence.HeadingTypeEnum.M,
+                ModeIndicator = APBSentence.ModeIndicatorEnum.S,
+            };
+
+            string actual = apbSentence.EncodeSentence();
+
+            Assert.Equal(expected, actual);
+        }
     }
 }
